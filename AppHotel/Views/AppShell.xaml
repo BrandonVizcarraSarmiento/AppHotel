@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:AppHotel.Views"
+       x:Class="AppHotel.Views.AppShell"
+       BackgroundColor="#2196F3">
+    <TabBar>
+        <ShellContent Title="Inicio" Icon="inicio.png" ContentTemplate="{DataTemplate local:HomePage}" />
+        <ShellContent Title="Reservas" Icon="reservacion.png" ContentTemplate="{DataTemplate local:ReservationPage}" />
+        <ShellContent Title="Servicios" Icon="servicio.png" ContentTemplate="{DataTemplate local:ServicesPage}" />
+        <ShellContent Title="Perfil" Icon="perfil.png" ContentTemplate="{DataTemplate local:ProfilePage}" />
+    </TabBar>
+</Shell>

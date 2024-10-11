@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:system="clr-namespace:System;assembly=mscorlib"
+             x:Class="AppHotel.Views.ReservationPage"
+             Title="Reservaciones">
+    <ScrollView>
+        <StackLayout Padding="20">
+
+            <!-- Título de la sección -->
+            <Label Text="Reservar tu estancia"
+                   FontSize="32"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="#333333"
+                   Margin="0,20,0,10"/>
+
+            <!-- Frame para el campo de entrada del nombre -->
+            <Frame CornerRadius="10" 
+                   Padding="10"
+                   BackgroundColor="White">
+                <Entry x:Name="EntryName"
+                       Placeholder="Nombre completo" 
+                       FontSize="18"
+                       TextColor="#333333"
+                       PlaceholderColor="#333333"
+                       BackgroundColor="AliceBlue"/>
+            </Frame>
+
+            <!-- Frame para el campo de entrada del correo electrónico -->
+            <Frame CornerRadius="10" 
+                   Padding="10" 
+                   BackgroundColor="White">
+                <Entry x:Name="EntryEmail"
+                       Placeholder="Correo electrónico" 
+                       FontSize="18"
+                       TextColor="#333333"
+                       PlaceholderColor="#333333"
+                       BackgroundColor="AliceBlue"/>
+            </Frame>
+
+
+            <!-- Campo de entrada para la fecha de llegada -->
+            <Label Text="Fecha de llegada"
+                   FontSize="18"
+                   TextColor="#333333"/>
+            <DatePicker Date="{x:Static system:DateTime.Now}" 
+                        Format="D"
+                        Margin="0,0,0,20"
+                        TextColor="#333333"/>
+
+            <!-- Campo de entrada para la fecha de salida -->
+            <Label Text="Fecha de salida"
+                   FontSize="18"
+                   TextColor="#333333"/>
+            <DatePicker Date="{x:Static system:DateTime.Now}" 
+                        Format="D"
+                        Margin="0,0,0,20"
+                        TextColor="#333333"/>
+
+            <!-- Título para la selección de tipo de habitación -->
+            <Label Text="Tipo de habitación"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   TextColor="#333333"
+                   Margin="0,20,0,10"/>
+
+            <!-- Opciones de tipo de habitación -->
+            <StackLayout Margin="0,0,0,20" BackgroundColor="AliceBlue">
+                <RadioButton x:Name="singleRoomRadioButton"
+                             Content="Habitación Individual"
+                             GroupName="RoomType"
+                             Margin="0,0,0,10"
+                             TextColor="#333333"/>
+                <RadioButton x:Name="doubleRoomRadioButton"
+                             Content="Habitación Doble"
+                             GroupName="RoomType"
+                             Margin="0,0,0,10"
+                             TextColor="#333333"/>
+                <RadioButton x:Name="suiteRoomRadioButton"
+                             Content="Suite"
+                             GroupName="RoomType"
+                             Margin="0,0,0,10"
+                             TextColor="#333333"/>
+            </StackLayout>
+
+            <!-- Botón para realizar la reserva -->
+            <Button Text="Reservar ahora"
+                    BackgroundColor="#2196F3"
+                    TextColor="White"
+                    CornerRadius="25"
+                    HeightRequest="50"
+                    FontSize="18"
+                    HorizontalOptions="FillAndExpand"
+                    Clicked="OnReserveClicked"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppHotel.Views.SectionListPage"
+             Title="Buscar Sección">
+
+    <StackLayout Padding="10">
+        <SearchBar Placeholder="Buscar por nombre"
+                   TextChanged="OnSearchTextChanged" />
+
+        <ListView x:Name="SectionListView" ItemsSource="{Binding Secciones}" ItemTapped="OnSectionTapped">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Nombre}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

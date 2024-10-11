@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppHotel.Views.ServicesDetailPage">
+    <StackLayout Padding="20" Spacing="10">
+        
+        <!-- Nombre del servicio -->
+        <Label Text="{Binding Nombre}" 
+               FontSize="28" 
+               FontAttributes="Bold" 
+               TextColor="#333333"
+               HorizontalOptions="Center"/>
+        <!-- Imagen del servicio -->
+        <Frame BackgroundColor="White" 
+               HasShadow="True" 
+               CornerRadius="15" 
+               Padding="0"
+               BorderColor="#D0D0D0">
+            <Image Source="{Binding Imagen}" 
+                   Aspect="AspectFill" 
+                   HeightRequest="200" 
+                   HorizontalOptions="FillAndExpand"/>
+        </Frame>
+        <!-- Descripción del servicio -->
+        <Label Text="{Binding Descripcion}" 
+               FontSize="16" 
+               TextColor="#555555"
+               HorizontalOptions="Center"
+               Margin="0,10,0,20"
+               LineBreakMode="WordWrap"
+               HorizontalTextAlignment="Center"/>
+
+        <!-- Botón de regreso -->
+        <Button Text="Regresar" 
+                BackgroundColor="#007BFF" 
+                TextColor="White" 
+                FontSize="20" 
+                CornerRadius="25" 
+                HeightRequest="50" 
+                HorizontalOptions="FillAndExpand"
+                Clicked="OnBackButtonClicked"/>
+    </StackLayout>
+</ContentPage>

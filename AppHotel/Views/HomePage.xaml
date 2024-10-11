@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppHotel.Views.HomePage"
+             Title="Inicio">
+    <StackLayout Padding="0" Spacing="0">
+        <!-- Imagen de fondo para la bienvenida -->
+        <Image Source="hotel.jpg" Aspect="AspectFill" HeightRequest="300"/>
+
+        <!-- Capa de contenido superpuesta -->
+        <StackLayout Padding="20" VerticalOptions="FillAndExpand" BackgroundColor="White" Margin="0,-30,0,0">
+
+            <!-- Título Bienvenida -->
+            <Label Text="Bienvenido al Hotel XYZ"
+                   FontSize="32"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="#333333"
+                   Margin="0,20,0,10"/>
+
+            <!-- Texto introductorio -->
+            <Label Text="Disfruta de una experiencia única de confort y lujo. Relájate y déjanos cuidar de ti."
+                   FontSize="18"
+                   HorizontalOptions="Center"
+                   TextColor="#555555"
+                   Margin="20,0,20,20"
+                   HorizontalTextAlignment="Center"/>
+
+            <!-- Botón de acción -->
+            <Button Text="Reservar ahora"
+                    BackgroundColor="#2196F3"
+                    TextColor="White"
+                    CornerRadius="25"
+                    HeightRequest="50"
+                    FontSize="18"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="20"
+                    Clicked="OnReservationClicked"/>
+
+            <!-- Servicios destacados -->
+            <Label Text="Servicios Destacados" 
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="#333333"
+                   Margin="0,20,0,10"/>
+
+            <!-- Íconos de servicios -->
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="20">
+                <StackLayout VerticalOptions="Center">
+                    <Image Source="iconpiscina.jpg" HeightRequest="50" WidthRequest="50" />
+                    <Label Text="Piscina" HorizontalOptions="Center" TextColor="#555555"/>
+                </StackLayout>
+                <StackLayout VerticalOptions="Center">
+                    <Image Source="iconspa.jpg" HeightRequest="50" WidthRequest="50"/>
+                    <Label Text="Spa" HorizontalOptions="Center" TextColor="#555555"/>
+                </StackLayout>
+                <StackLayout VerticalOptions="Center">
+                    <Image Source="iconRestaurante.jpg" HeightRequest="50" WidthRequest="50"/>
+                    <Label Text="Restaurante" HorizontalOptions="Center" TextColor="#555555"/>
+                </StackLayout>
+            </StackLayout>
+
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

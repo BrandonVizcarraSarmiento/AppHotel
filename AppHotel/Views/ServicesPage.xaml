@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppHotel.Views.ServicesPage"
+             Title="Servicios">
+    <StackLayout Padding="20">
+        <Label Text="Servicios"
+               FontSize="32"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               TextColor="#333333"
+               Margin="0,20,0,10"/>
+
+        <ScrollView>
+            <StackLayout Spacing="20">
+                <ListView ItemsSource="{Binding Servicios}" ItemTapped="OnServiciosTapped" HasUnevenRows="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Frame HasShadow="True" Padding="0" CornerRadius="15" Margin="0,10">
+                                    <StackLayout>
+                                        <Image Source="{Binding Imagen}"
+                                               Aspect="AspectFill"
+                                               HeightRequest="150" />
+                                        <Label Text="{Binding Nombre}"
+                                               FontSize="20"
+                                               FontAttributes="Bold"
+                                               HorizontalOptions="Center"
+                                               VerticalOptions="Center"
+                                               BackgroundColor="Transparent"
+                                               TextColor="White" 
+                                               Margin="0,-40,0,0" />
+                                    </StackLayout>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ScrollView>
+
+        <!-- Botón para buscar sección -->
+        <Button Text="Buscar Sección"
+                VerticalOptions="End"
+                BackgroundColor="#007BFF"
+                TextColor="White"
+                Margin="0,20,0,0"
+                CornerRadius="25"
+                HorizontalOptions="FillAndExpand"
+                Clicked="OnSearchSectionClicked"/>
+    </StackLayout>
+</ContentPage>
